@@ -1,43 +1,19 @@
-#include "main.h"
+int _putchar(char c);
 
-/**
+char *_memset(char *s, char b, unsigned int n);
 
- * _memset - fills memory with a constant byte
+char *_memcpy(char *dest, char *src, unsigned int n);
 
- *
+char *_strchr(char *s, char c);
 
- * @s: pointer to memory area to fill
+unsigned int _strspn(char *s, char *accept);
 
- * @n: the number of bytes to fill
+char *_strpbrk(char *s, char *accept);
 
- * @b: constant byte
+char *_strstr(char *haystack, char *needle);
 
- *
+void print_chessboard(char (*a)[8]);
 
- * Return: a pointer to the memory area @s
+void print_diagsums(int *a, int size);
 
- */
-
-
-
-char *_memset(char *s, char b, unsigned int n)
-
-{
-
-	unsigned int i;
-
-
-
-	for (i = 0; i < n; i++)
-
-	{
-
-		s[i] = b;
-
-	}
-
-
-
-	return (s);
-
-}
+void set_string(char **s, char *to);

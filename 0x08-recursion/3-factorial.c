@@ -2,71 +2,42 @@
 
 /**
 
- * _strspn - a function that gets the
+ * factorial - returns factorial
 
- *           length of a prexif substring
+ * @n: the number to factor
 
- *
+ * Return: factorial
 
- * @s: pointer to string input
+ */
 
- * @accept: substring prefix to look for
-
- *
-
- * Return: the number of bytes in the initial segment
-
-*/
-
-
-
-unsigned int _strspn(char *s, char *accept)
+int factorial(int n)
 
 {
 
- int i, j, f;
+	if (n < 0)
+
+	{
+
+		return (-1);
+
+	}
+
+	else if (n <= 1)
+
+	{
+
+		return (1);
+
+	}
+
+	else
+
+	{
+
+		return (n * factorial(n - 1));
+
+	}
 
 
-
- i = 0;
-
- while (s[i] != '\0')
-
- {
-
-  j = 0;
-
-  f = 1; /*flag status*/
-
-  while (accept[j] != '\0')
-
-  {
-
-   if (s[i] == accept[j])
-
-   {
-
-    f = 0; /*success*/
-
-    break;
-
-   }
-
-   j++;
-
-  }
-
-  if (f == 1)
-
-   break;
-
-  i++;
-
- }
-
-
-
- return (i);
 
 }
-

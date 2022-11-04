@@ -1,53 +1,25 @@
+#include "main.h"
+
 /**
 
- * _strchr - a function that locates a character in a string
+ * _strlen_recursion - returns the length of a string.
 
- *
+ * @s: string
 
- * @s: pointer to our string array input
-
- * @c: character to locate from input array
-
- *
-
- * Return: first occurence of charatcer or null if not found
-
-*/
-
-
-
-char *_strchr(char *s, char c)
-
-{
-
- while (*s != '\0')
-
- {
-
-  if (*s == c)
-
-   return (s);
-
-  s++;
-
- }
-
- /**
-
-  * if c is '\0', you should return
-
-  * the pointer to the '\0' of the
-
-  * string s
+ * Return: the length of a string.
 
  */
 
- if (*s == c)
+int _strlen_recursion(char *s)
 
-  return (s);
+{
 
- /*return null if not found*/
+ if (*s == '\0')
 
- return ('\0');
+  return (0);
+
+ else
+
+  return (1 + _strlen_recursion(s + 1));
 
 }
